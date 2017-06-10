@@ -1,8 +1,10 @@
 public class twosum{
   public static void main(String[] args) {
     int[] numbers = {1,2,3,4};
+    int[] output;
     int tar = 5;
-    System.out.println(twoSum(numbers, tar));
+    output = twoSum(numbers, tar);
+    System.out.println(output);
   } // End of main
 
   public static int[] twoSum(int[] nums, int target) {
