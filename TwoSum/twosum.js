@@ -11,14 +11,14 @@ var twoSum = function(nums, target) {
         continue;
       } else {
         if((nums[i] + nums[j]) == target) {
-          resultInts.push(nums[i]);
-          resultInts.push(nums[j]);
-          break
+          resultInts.push(i);
+          resultInts.push(j);
+          //break
+          return "Values [" + resultInts + "]";
         }
       }
     }
   }
-  console.log("Values " + resultInts);
 };
 
-twoSum([1,2,3,4], 5);
+console.log(twoSum([1,2,3,4], 5));

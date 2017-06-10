@@ -4,7 +4,9 @@ public class twosum{
     int[] output;
     int tar = 5;
     output = twoSum(numbers, tar);
-    System.out.println(output);
+    for(int i = 0; i < output.length; i++) {
+      System.out.println(output[i]);
+    }
   } // End of main
 
   public static int[] twoSum(int[] nums, int target) {
@@ -15,8 +17,8 @@ public class twosum{
           continue;
         } else {
           if((nums[i] + nums[j]) == target) {
-            resultInts[0] = nums[i];
-            resultInts[1] = nums[j];
+            resultInts[0] = i;
+            resultInts[1] = j;
             return resultInts;
           }
         }

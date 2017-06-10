@@ -17,8 +17,8 @@ class Solution(object):
           continue
         else:
           if (nums[i] + numCopy[j]) == target:
-            returnInts.append(nums[i])
-            returnInts.append(numCopy[j])
+            returnInts.append(i)
+            returnInts.append(j)
             return "Values: " + str(returnInts)
 
   def twoSumV2(self, nums, target):

@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void printVector(vector<int> vecToPrint);
+
 class Solution {
   public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -12,8 +14,8 @@ class Solution {
             continue;
           } else {
             if((nums[i]+nums[j]) == target) {
-              resultInt.push_back(nums[i]);
-              resultInt.push_back(nums[j]);
+              resultInt.push_back(i);
+              resultInt.push_back(j);
               return resultInt;
             }
           }
@@ -25,7 +27,7 @@ class Solution {
 };
 
 void printVector(vector<int> vecToPrint) {
-  for(unsigned int i = 0; i <= vecToPrint.size(); i++) {
+  for(unsigned int i = 0; i < vecToPrint.size(); i++) {
     cout << vecToPrint[i] << "\n";
   }
 } 
