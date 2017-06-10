@@ -32,15 +32,15 @@ void printVector(vector<int> vecToPrint) {
   }
 } 
 
-int main() {
+int main(int argc, char* argv[]) {
   Solution sol1;
   vector<int> nums1(4,0);
-  nums1[0] = 1;
-  nums1[1] = 2;
-  nums1[2] = 3;
-  nums1[3] = 4;
+  nums1[0] = atoi(argv[1]);
+  nums1[1] = atoi(argv[2]);
+  nums1[2] = atoi(argv[3]);
+  nums1[3] = atoi(argv[4]);
   vector<int> answers;
-  int target1 = 5;
+  int target1 = atoi(argv[5]);
   answers = sol1.twoSum(nums1, target1);
   printVector(answers);
   sol1.callEnd();

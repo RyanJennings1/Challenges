@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from sys import argv
+
 class Solution(object):
   def twoSum(self, nums, target):
     """
@@ -34,4 +36,10 @@ class Solution(object):
 
 sol = Solution()
 
-print sol.twoSum([1,2,3,4],5)
+if len(argv) < 6:
+  print "Not enough arguments"
+elif len(argv) == 6:
+  numArray = [int(argv[1]),int(argv[2]),int(argv[3]),int(argv[4])]
+  print sol.twoSum(numArray, int(argv[5]))
+else:
+  print "Wrong number of arguments"

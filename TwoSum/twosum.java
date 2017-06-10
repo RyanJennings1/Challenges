@@ -1,8 +1,13 @@
 public class twosum{
   public static void main(String[] args) {
-    int[] numbers = {1,2,3,4};
+    int[] numbers = {
+      Integer.parseInt(args[0]),
+      Integer.parseInt(args[1]),
+      Integer.parseInt(args[2]),
+      Integer.parseInt(args[3]),
+    };
     int[] output;
-    int tar = 5;
+    int tar = Integer.parseInt(args[4]);
     output = twoSum(numbers, tar);
     for(int i = 0; i < output.length; i++) {
       System.out.println(output[i]);

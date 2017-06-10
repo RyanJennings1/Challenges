@@ -1,10 +1,30 @@
 package main
 
-import "fmt"
+import(
+  "fmt"
+  "os"
+  "strconv"
+)
 
 func main() {
-  myArray := [4]int{1,2,3,4}
-  tar := 5
+  var arg1, arg2, arg3, arg4 int
+  if i, err := strconv.Atoi(os.Args[1]); err == nil {
+    arg1 = i
+  }
+  if i, err := strconv.Atoi(os.Args[2]); err == nil {
+    arg2 = i
+  }
+  if i, err := strconv.Atoi(os.Args[3]); err == nil {
+    arg3 = i
+  }
+  if i, err := strconv.Atoi(os.Args[4]); err == nil {
+    arg4 = i
+  }
+  myArray := [4]int{arg1,arg2,arg3,arg4}
+  var tar int
+  if i, err := strconv.Atoi(os.Args[5]); err == nil {
+    tar = i
+  }
   fmt.Println(twoSum(myArray, tar))
 }
 

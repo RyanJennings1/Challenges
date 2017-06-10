@@ -21,4 +21,4 @@ var twoSum = function(nums, target) {
   }
 };
 
-console.log(twoSum([1,2,3,4], 5));
+console.log(twoSum([parseInt(process.argv[2]), parseInt(process.argv[3]), parseInt(process.argv[4]), parseInt(process.argv[5])], parseInt(process.argv[6])));
