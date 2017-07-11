@@ -25,12 +25,10 @@ class Solution {
       int i;
 
       int intLength = log10(abs(x)) + 1;
-      int individualNumbers[intLength];
       int exponent = intLength - 1;
 
       for(i = 0; i < intLength; i++) {
-        individualNumbers[i] = y%(10);
-        returnInt += (individualNumbers[i]*(pow(10, exponent)));
+        returnInt += ((y%(10))*(pow(10, exponent)));
         y = y/10;
         exponent--;
       }
