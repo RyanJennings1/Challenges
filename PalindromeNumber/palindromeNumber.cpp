@@ -10,13 +10,25 @@
 class Solution {
   public:
     bool isPalindrome(int x) {
-      return true;
+      int reversedNum = 0;
+      int y = abs(x);
+      while(y > 0) {
+        reversedNum = (reversedNum*10) + (y%10);
+        y /= 10;
+      }
+      std::cout << "x = " << x << std::endl;
+      std::cout << "reversedNum = " << reversedNum << std::endl;
+      if( abs(x) == reversedNum ) {
+        return true;
+      } else {
+        return false;
+      }
     }
 };
 
 int main(int argc, char* argv[]) {
   Solution sol;
-  int number = 123;
+  int number = atoi(argv[1]);
   bool result;
   result = sol.isPalindrome(number);
   
