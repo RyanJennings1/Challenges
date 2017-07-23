@@ -15,8 +15,6 @@
 #include <string>
 #include <math.h>
 
-using namespace std;
-
 class Solution {
   public:
     int reverse(int x) {
@@ -43,7 +41,7 @@ int main(int argc, char* argv[]) {
 
   int solutionInt = sol1.reverse(atoi(argv[1]));
 
-  cout << "Solution: " << solutionInt << endl;
+  std::cout << "Solution: " << solutionInt << std::endl;
 
   return 0;
 }

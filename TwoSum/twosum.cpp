@@ -1,13 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdlib>
+#include <vector>
 
-using namespace std;
-
-void printVector(vector<int> vecToPrint);
+void printVector(std::vector<int> vecToPrint);
 
 class Solution {
   public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-      vector<int> resultInt;
+    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+      std::vector<int> resultInt;
       for(unsigned int i = 0; i < nums.size(); i++) {
         for(unsigned int j = 0; j < nums.size(); j++) {
           if(nums[i] == nums[j]) {
@@ -26,20 +26,20 @@ class Solution {
     void callEnd();
 };
 
-void printVector(vector<int> vecToPrint) {
+void printVector(std::vector<int> vecToPrint) {
   for(unsigned int i = 0; i < vecToPrint.size(); i++) {
-    cout << vecToPrint[i] << "\n";
+    std::cout << vecToPrint[i] << "\n";
   }
 } 
 
 int main(int argc, char* argv[]) {
   Solution sol1;
-  vector<int> nums1(4,0);
+  std::vector<int> nums1(4,0);
   nums1[0] = atoi(argv[1]);
   nums1[1] = atoi(argv[2]);
   nums1[2] = atoi(argv[3]);
   nums1[3] = atoi(argv[4]);
-  vector<int> answers;
+  std::vector<int> answers;
   int target1 = atoi(argv[5]);
   answers = sol1.twoSum(nums1, target1);
   printVector(answers);
@@ -48,6 +48,6 @@ int main(int argc, char* argv[]) {
 }
 
 void Solution::callEnd() {
-  cout << "End of program" << "\n";
+  std::cout << "End of program" << "\n";
 }
 
