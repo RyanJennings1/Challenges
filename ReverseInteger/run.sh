@@ -1,14 +1,15 @@
 #!/bin/sh
 
-echo C++_________________________
+echo "C++"
 make
 ./reverseInteger $1
-echo ""
 
-echo Python______________________
+echo "\nPython"
 ./reverseInteger.py $1
-echo ""
 
-echo Java________________________
+echo "\nJava"
 javac reverseInteger.java
 java reverseInteger $1
+
+echo "\nJavascript"
+node reverseInteger.js $1
