@@ -11,3 +11,5 @@ printf "\nJava: \n"
 javac palindromeNumber.java
 java palindromeNumber $1
 
+printf "\nJavascript: \n"
+node palindromeNumber.js $1
