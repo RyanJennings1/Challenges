@@ -16,8 +16,6 @@ class Solution {
         reversedNum = (reversedNum*10) + (y%10);
         y /= 10;
       }
-      std::cout << "x = " << x << std::endl;
-      std::cout << "reversedNum = " << reversedNum << std::endl;
       if( abs(x) == reversedNum ) {
         return true;
       } else {
@@ -30,9 +28,15 @@ int main(int argc, char* argv[]) {
   Solution sol;
   int number = atoi(argv[1]);
   bool result;
+  const char *resultString;
   result = sol.isPalindrome(number);
+  if(result) {
+    resultString = "True";
+  } else {
+    resultString = "False";
+  }
   
-  std::cout << "Solution: " << result << std::endl;
+  std::cout << "Solution: " << resultString << std::endl;
 
   return 0;
 }
